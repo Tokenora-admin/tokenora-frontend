@@ -1,0 +1,32 @@
+.customCard {
+    background: linear-gradient(241.25deg, rgba(41, 39, 85, 0.35) 4.4%, rgba(41, 39, 84, 0.78) 61.77%, rgba(27, 24, 66, 0.35) 119.94%);
+    width: 240px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.customCard:hover {
+    background: linear-gradient(135.56deg, #292652 7.31%, #272457 96.39%);
+}
+
+.cardLogo {
+    background: #504F94;
+    box-shadow: 0px 22px 16px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    height: 74px !important;
+    width: 74px !important;
+    position: absolute;
+    top: -40px;
+    right: 34%;
+}
+
+.mainText {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.subText {
+    font-weight: normal;
+    font-size: 14px;
+    color: #B1AFCD;
+}

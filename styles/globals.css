@@ -1,0 +1,85 @@
+html, body {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #1E1B43 !important;
+  color: white !important;
+  font-family: Poppins !important;
+  scroll-behavior: smooth !important;
+  cursor: url('../public/svg-cursor.png'), auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.heading {
+  font-style: normal;
+}
+
+.mainheading {
+  font-weight: bold;
+}
+
+.subheading {
+  font-weight: 500;
+  color: #7877B1;
+}
+
+.color-F7931A {
+  color: #F7931A;
+}
+
+.color-CECDE1 {
+  color: #CECDE1;
+}
+
+.color-7877B1 {
+  color: #7877B1;
+}
+
+.color-201D48 {
+  color: #201D48;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.rotate-180 {
+  transform: rotate(-180deg);
+  transition: transform 300ms;
+}
+
+.faqicon {
+  transition: transform 300ms;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.btn {
+  background: #7877B1 !important;
+  font-weight: bold !important;
+  box-shadow: 0px 8px 25px rgba(23, 18, 43, 0.4) !important;
+  border: 0px !important;
+}
+
+.btn:hover {
+  background: #9994e0 !important;
+}
+
+.btn:active {
+  color: #ffffff !important;
+  background: rgba(247, 147, 26, 1) !important;
+}
+
+.joinButton {
+  border-radius: 6px;
+  color: #46436e;
+  width: 100%;
+}
+
+.custom-cursor {
+  /* cursor: url('../public/svg-cursor.png'), auto; */
+}
