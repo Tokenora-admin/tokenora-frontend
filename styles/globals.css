@@ -5,7 +5,6 @@ html, body {
   color: white !important;
   font-family: Poppins !important;
   scroll-behavior: smooth !important;
-  cursor: url('../public/svg-cursor.png'), auto;
 }
 
 * {
@@ -78,8 +77,4 @@ html, body {
   border-radius: 6px;
   color: #46436e;
   width: 100%;
-}
-
-.custom-cursor {
-  /* cursor: url('../public/svg-cursor.png'), auto; */
 }

@@ -14,7 +14,7 @@ const card = (props) => {
                 />
             </div>
             <div className={`${styles.mainText} pt-5 pb-4`}>{props.main}</div>
-            <span className={`${styles.subText} custom-cursor`}>{props.sub}</span>
+            <span className={`${styles.subText}`}>{props.sub}</span>
         </div>
     )
 }
