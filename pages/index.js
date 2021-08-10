@@ -7,6 +7,7 @@ import HeadingTwo from '../components/headingtwo/headingtwo'
 import Cards from '../components/cards/cards'
 import HeadingThree from '../components/headingthree/headingthree'
 import SignUp from '../components/signup/signup'
+import MobilePreview from '../components/mobilepreview/mobilepreview'
 import Faq from '../components/faq/faq'
 import HeadingFour from '../components/headingfour/headingfour'
 import Social from '../components/social/social'
@@ -24,6 +25,7 @@ export default function Home() {
         <Cards />
         <HeadingThree />
         <SignUp />
+        <MobilePreview />
         <Faq />
         <HeadingFour />
         <Social />

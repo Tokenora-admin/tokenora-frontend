@@ -3,7 +3,7 @@ import styles from './faq.module.css'
 import Image from 'next/image'
 import arrow from '../../public/down-arrow.png'
 
-const faq = () => {
+const Faq = () => {
 
     const [openedFaq, SetopenedFaq] = useState('')
 
@@ -20,30 +20,28 @@ const faq = () => {
         }
     ])
     return (
-        <>
+        <div id="faq" className={`d-flex flex-column align-items-center`}>
             <h1>FAQs</h1>
-            <div className={`d-flex flex-column align-items-center`}>
-                {faq.map(i => {
-                    return (
-                        <div key={i.id} className={`p-3 m-1 col-7 color-CECDE1 cursor-pointer ${openedFaq === i.id ? styles.faqopen : styles.faq}`} onClick={() => SetopenedFaq(openedFaq === i.id ? '' : i.id)}>
-                            <div className={`d-flex justify-content-between`}>
-                                <div><strong>{i.q1}</strong></div>
-                                <div className={`${openedFaq === i.id && 'rotate-180'} faqicon`}>
-                                    <Image
-                                        src={arrow}
-                                        alt="tokenora-webpage"
-                                    />
-                                </div>
-                            </div>
-                            <div className={`pt-3 text-align-left ${openedFaq === i.id ? `d-block` : `d-none`}`}>
-                                <p><small>{i.a1}</small></p>
+            {faq.map(i => {
+                return (
+                    <div key={i.id} className={`p-3 m-1 col-lg-7 col-md-9 col-sm-10 col-xs-10 color-CECDE1 cursor-pointer ${openedFaq === i.id ? styles.faqopen : styles.faq}`} onClick={() => SetopenedFaq(openedFaq === i.id ? '' : i.id)}>
+                        <div className={`d-flex justify-content-between`}>
+                            <div><strong>{i.q1}</strong></div>
+                            <div className={`${openedFaq === i.id && 'rotate-180'} faqicon`}>
+                                <Image
+                                    src={arrow}
+                                    alt="tokenora-webpage"
+                                />
                             </div>
                         </div>
-                    )
-                })}
-            </div>
-        </>
+                        <div className={`pt-3 text-align-left ${openedFaq === i.id ? `d-block` : `d-none`}`}>
+                            <p><small>{i.a1}</small></p>
+                        </div>
+                    </div>
+                )
+            })}
+        </div>
     )
 }
 
-export default faq
+export default Faq

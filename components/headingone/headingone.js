@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeadingOne = () => {
     return (
-        <div className={`heading`}>
+        <div id="headingone" className={`heading`}>
             <span className={`mainheading`}>
                 <p className="h1"><strong><span className={`color-F7931A`}>Hi</span>, this is tokenora</strong></p>
             </span>

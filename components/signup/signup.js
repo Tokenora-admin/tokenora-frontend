@@ -3,7 +3,7 @@ import styles from './signup.module.css'
 
 const SignUp = () => {
     return (
-            <div className="d-flex flex-column align-items-center">
+            <div id="signup" className="d-flex flex-column align-items-center">
                 <div className="col-lg-6 col-md-7 col-sm-8 p-1">
                     <input type="text" className={`form-control ${styles.inputElement}`} placeholder="Enter mail" />
                 </div>

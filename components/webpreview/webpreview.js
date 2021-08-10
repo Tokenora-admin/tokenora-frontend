@@ -1,14 +1,18 @@
 import React from 'react'
-import TokenoraWebpage from '../../public/web-preview/tokenora-webpage.png'
 import Image from 'next/image'
 
-const webpreview = () => {
+import TokenoraWebpage from '../../public/web-preview/tokenora-webpage.png'
+
+const Webpreview = () => {
     return (
-        <Image
-            src={TokenoraWebpage}
-            alt="tokenora-webpage"
-        />
+        <div id="webpreview">
+            <Image
+                src={TokenoraWebpage}
+                alt="tokenora-webpage"
+                placeholder="blur"
+            />
+        </div>
     )
 }
 
-export default webpreview
+export default Webpreview

@@ -7,7 +7,7 @@ import instagramLogo from '../../public/social-icons/instagram.png'
 import twitterLogo from '../../public/social-icons/twitter.png'
 import facebookLogo from '../../public/social-icons/facebook.png'
 
-const social = () => {
+const Social = () => {
 
     const [SocialIcons] = useState([
         {
@@ -29,10 +29,10 @@ const social = () => {
     ])
 
     return (
-        <div className={`row justify-content-center user-select-none`}>
+        <div id="social" className={`row justify-content-center user-select-none`}>
             {SocialIcons.map(i => {
                 return (
-                    <div key={i.name} className={`d-flex justify-content-center col-lg-2 col-md-3 col-sm-4 p-2 m-1 ${styles.socialDiv}`}>
+                    <div key={i.name} className={`d-flex justify-content-center col-lg-2 col-md-3 col-sm-4 p-2 m-1 cursor-pointer ${styles.socialDiv}`}>
                         <Image
                             src={i.src}
                             alt={i.name}
@@ -48,4 +48,4 @@ const social = () => {
     )
 }
 
-export default social
+export default Social

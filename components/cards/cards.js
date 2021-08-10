@@ -25,7 +25,7 @@ const Cards = () => {
         }
     ])
     return (
-        <div className="row">
+        <div id="cards" className="row">
             {
                 Cards.map(i => {
                     return (

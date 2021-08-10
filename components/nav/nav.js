@@ -30,7 +30,7 @@ const Nav = () => {
     ])
 
     return (
-        <header className={`d-flex align-items-center`}>
+        <header id="nav" className={`d-flex align-items-center`}>
 
             <Image
                 src={tokenoraLogo}
@@ -53,7 +53,7 @@ const Nav = () => {
                     </a>
                 })}
             </span>
-            <a href="#join" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>
+            <a href="#headingthree" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>
 
         </header>
     )

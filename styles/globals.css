@@ -78,3 +78,51 @@ html, body {
   color: #46436e;
   width: 100%;
 }
+
+#nav {
+  padding-block: min(10vh, 50px);
+}
+
+#headingone {
+  padding-block: min(10vh, 80px);
+}
+
+#webpreview {
+  padding-block: min(10vh, 30px);
+}
+
+#headingtwo {
+  padding-block: min(10vh, 70px);
+}
+
+#cards {
+  padding-block: min(10vh, 65px);
+}
+
+#headingthree {
+  padding-block: min(10vh, 40px);
+}
+
+#signup {
+  padding-block: min(10vh, 50px);
+}
+
+#mobilepreview {
+  padding-block: min(10vh, 70px);
+}
+
+#faq {
+  padding-block: min(10vh, 50px);
+}
+
+#headingfour {
+  padding-block: min(10vh, 50px);
+}
+
+#social {
+  padding-block: min(10vh, 20px);
+}
+
+.mobile-screen-preview {
+  margin: 10px;
+}

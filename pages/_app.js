@@ -11,10 +11,6 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="a community for crypto users"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins"
-            rel="stylesheet"
-          />
       </Head>
 
       <Component {...pageProps} />
