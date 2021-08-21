@@ -10,7 +10,7 @@ const Footer = () => {
             <div className={`row justify-content-center`}>
                 {
                     FooterChips.map(i => {
-                        return <a key={i} className={`${styles.footerChips} col-lg-2 col-md-3 col-sm-4 col-6 m-2 cursor-pointer p-1 m-1`}>{i}</a>
+                        return <a href="/" key={i} className={`${styles.footerChips} col-lg-2 col-md-3 col-sm-4 col-6 m-2 cursor-pointer p-1 m-1`}>{i}</a>
                     })
                 }
             </div>

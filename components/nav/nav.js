@@ -45,7 +45,7 @@ const Nav = () => {
 
             <span className="ms-auto d-none d-md-block">
                 {SocialIcons.map(i => {
-                    return <a className="mx-1 cursor-pointer" href='#' key={i.name}>
+                    return <a className="mx-1 cursor-pointer" href='/' key={i.name}>
                         <Image
                             src={i.src}
                             alt={i.name}
