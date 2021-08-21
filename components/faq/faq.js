@@ -24,8 +24,8 @@ const Faq = () => {
             <h1>FAQs</h1>
             {faq.map(i => {
                 return (
-                    <div key={i.id} className={`p-3 m-1 col-lg-7 col-md-9 col-sm-10 col-xs-10 color-CECDE1 cursor-pointer ${openedFaq === i.id ? styles.faqopen : styles.faq}`} onClick={() => SetopenedFaq(openedFaq === i.id ? '' : i.id)}>
-                        <div className={`d-flex justify-content-between`}>
+                    <div key={i.id} className={`p-3 m-1 col-lg-7 col-md-9 col-sm-10 col-10 color-CECDE1 cursor-pointer ${openedFaq === i.id ? styles.faqopen : styles.faq}`} onClick={() => SetopenedFaq(openedFaq === i.id ? '' : i.id)}>
+                        <div className={`d-flex justify-content-between align-items-center`}>
                             <div><strong>{i.q1}</strong></div>
                             <div className={`${openedFaq === i.id && 'rotate-180'} faqicon`}>
                                 <Image

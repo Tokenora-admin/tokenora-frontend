@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from './social.module.css'
 
-import mediumLogo from '../../public/social-icons/medium.png'
-import instagramLogo from '../../public/social-icons/instagram.png'
-import twitterLogo from '../../public/social-icons/twitter.png'
-import facebookLogo from '../../public/social-icons/facebook.png'
+import mediumLogo from '../../public/social-icons/medium.svg'
+import instagramLogo from '../../public/social-icons/instagram.svg'
+import twitterLogo from '../../public/social-icons/twitter.svg'
+import facebookLogo from '../../public/social-icons/facebook.svg'
 
 const Social = () => {
 
@@ -32,7 +32,7 @@ const Social = () => {
         <div id="social" className={`row justify-content-center user-select-none`}>
             {SocialIcons.map(i => {
                 return (
-                    <div key={i.name} className={`d-flex justify-content-center col-lg-2 col-md-3 col-sm-4 p-2 m-1 cursor-pointer ${styles.socialDiv}`}>
+                    <div key={i.name} className={`d-flex justify-content-center col-lg-2 col-md-3 col-sm-4 col-7 p-2 m-1 cursor-pointer ${styles.socialDiv}`}>
                         <Image
                             src={i.src}
                             alt={i.name}

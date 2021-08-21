@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 import tokenoraLogo from '../../public/tokenora-logo.svg'
 import tokenoraText from '../../public/tokenora-text.svg'
-import mediumLogo from '../../public/social-icons/medium.png'
-import instagramLogo from '../../public/social-icons/instagram.png'
-import twitterLogo from '../../public/social-icons/twitter.png'
-import facebookLogo from '../../public/social-icons/facebook.png'
+import mediumLogo from '../../public/social-icons/medium.svg'
+import instagramLogo from '../../public/social-icons/instagram.svg'
+import twitterLogo from '../../public/social-icons/twitter.svg'
+import facebookLogo from '../../public/social-icons/facebook.svg'
 
 const Nav = () => {
 
@@ -49,6 +49,8 @@ const Nav = () => {
                         <Image
                             src={i.src}
                             alt={i.name}
+                            height={40}
+                            width={40}
                         />
                     </a>
                 })}
