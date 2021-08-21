@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import tokenoraLogo from '../../public/tokenora-logo.svg'
 import tokenoraText from '../../public/tokenora-text.svg'
@@ -45,7 +46,7 @@ const Nav = () => {
 
             <span className="ms-auto d-none d-md-block">
                 {SocialIcons.map(i => {
-                    return <a className="mx-1 cursor-pointer" href='/' key={i.name}>
+                    return <Link href='/' key={i.name}><a className="mx-1 cursor-pointer">
                         <Image
                             src={i.src}
                             alt={i.name}
@@ -53,6 +54,7 @@ const Nav = () => {
                             width={40}
                         />
                     </a>
+                    </Link>
                 })}
             </span>
             <a href="#headingthree" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>

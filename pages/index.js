@@ -1,5 +1,3 @@
-import styles from '../styles/Home.module.css'
-
 import Nav from '../components/nav/nav'
 import HeadingOne from '../components/headingone/headingone'
 import WebPreview from '../components/webpreview/webpreview'
