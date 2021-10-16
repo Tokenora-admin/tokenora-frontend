@@ -1,12 +1,31 @@
 .customCard {
     background: linear-gradient(241.25deg, rgba(41, 39, 85, 0.35) 4.4%, rgba(41, 39, 84, 0.78) 61.77%, rgba(27, 24, 66, 0.35) 119.94%);
     width: 240px;
+    height: 220px;
     position: relative;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .customCard:hover {
     background: linear-gradient(135.56deg, #292652 7.31%, #272457 96.39%);
+}
+
+.customCard::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, rgba(199, 124, 54, 0.5), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+.customCard:hover::before {
+    --size: 200px;
 }
 
 .cardLogo {
@@ -15,9 +34,9 @@
     border-radius: 30px;
     height: 74px !important;
     width: 74px !important;
-    position: absolute;
-    top: -40px;
-    right: 34%;
+    position: relative;
+    bottom: 90%;
+    left: 34%;
 }
 
 .mainText {
