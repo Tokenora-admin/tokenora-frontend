@@ -57,7 +57,7 @@ const Nav = () => {
                     </Link>
                 })}
             </span>
-            <a href="#headingthree" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>
+            <a href="#signup" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>
 
         </header>
     )

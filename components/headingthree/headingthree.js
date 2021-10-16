@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeadingThree = () => {
     return (
-        <div id="headingthree" className={`heading`}>
+        <div id="signup" className={`heading`}>
             <span className={`mainheading`}>
                 <p className="h1"><strong>interesting enough?<span className={`color-F7931A`}> reserve </span>a username</strong></p>
             </span>

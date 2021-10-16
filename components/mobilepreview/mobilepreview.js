@@ -5,7 +5,7 @@ import TokenoraMobileNotifications from '../../public/mobile-preview/notificatio
 import TokenoraMobilePosts from '../../public/mobile-preview/posts.png'
 import TokenoraMobileStatistics from '../../public/mobile-preview/statistics.png'
 
-const Webpreview = () => {
+const MobilePreview = () => {
     return (
         <div id="mobilepreview" className={`row`}>
             <div className={`col-4`}>
@@ -42,4 +42,4 @@ const Webpreview = () => {
     )
 }
 
-export default Webpreview
+export default MobilePreview
