@@ -9,17 +9,17 @@ const Cards = () => {
 
     const [Cards] = useState([
         {
-            main: "Community",
+            main: "community",
             sub: "become a part of a community that will help you understand crypto and blockchain better",
             src: CommunityLogo
         },
         {
-            main: "News & Updates",
+            main: "news & updates",
             sub: "get reliable information about what's happening in the crypto world with accurate information and latest updates",
             src: NewsUpdatesLogo
         },
         {
-            main: "Reports & Analysis",
+            main: "reports & analysis",
             sub: "get detailed analysis of the most ambitious projects in the crypto space",
             src: ReportsAnalysisLogo
         }
