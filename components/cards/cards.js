@@ -38,7 +38,7 @@ const Cards = () => {
         })
         return () => {
             Array.from(cards).map((card) => {
-                card.removeEventListener(true)
+                card.removeEventListener(true, null)
             })
         }
     }, [])

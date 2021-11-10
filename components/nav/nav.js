@@ -9,7 +9,7 @@ import instagramLogo from '../../public/social-icons/instagram.svg'
 import twitterLogo from '../../public/social-icons/twitter.svg'
 import facebookLogo from '../../public/social-icons/facebook.svg'
 
-const Nav = () => {
+const Nav = (props) => {
 
     const [SocialIcons] = useState([
         {
@@ -44,20 +44,23 @@ const Nav = () => {
                 className={`ps-1`}
             />
 
-            <span className="ms-auto d-none d-md-block">
-                {SocialIcons.map(i => {
-                    return <Link href='/' key={i.name}><a className="mx-1 cursor-pointer">
-                        <Image
-                            src={i.src}
-                            alt={i.name}
-                            height={40}
-                            width={40}
-                        />
-                    </a>
-                    </Link>
-                })}
-            </span>
-            <a href="#signup" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>
+            {props?.showNavLinks &&
+                <>
+                    <span className="ms-auto d-none d-md-block">
+                        {SocialIcons.map(i => {
+                            return <Link href='/' key={i.name}><a className="mx-1 cursor-pointer">
+                                <Image
+                                    src={i.src}
+                                    alt={i.name}
+                                    height={40}
+                                    width={40}
+                                />
+                            </a>
+                            </Link>
+                        })}
+                    </span>
+                    <a href="#signup" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>
+                </>}
 
         </header>
     )
