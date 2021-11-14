@@ -4,13 +4,16 @@ import { useRouter } from 'next/router'
 import Nav from '../components/nav/nav'
 import Footer from '../components/footer/footer'
 import Social from '../components/social/social'
+import Modal from '../components/modal/modal'
+
+import { config } from '../config'
 
 const VerifyPage = () => {
     const router = useRouter()
 
     const [UserName, SetUserName] = useState('')
     const [ShowSetupSection, SetShowSetupSection] = useState(false)
-    const [ShowAlert, SetShowAlert] = useState(false)
+    const [OpenModal, SetOpenModal] = useState(false)
     const [Error, SetError] = useState('')
     const [UserEmail, SetUserEmail] = useState('')
     const [Token, SetToken] = useState('')
@@ -20,7 +23,7 @@ const VerifyPage = () => {
         const { token } = router.query
         SetToken(token)
 
-        fetch('http://localhost:4000/api/verify', {
+        fetch(`${config.url}/api/verify`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -32,14 +35,14 @@ const VerifyPage = () => {
                 if (data?.msg === "Verified") {
                     if (data?.user?.username) {
                         SetError(data?.msg)
-                        SetShowAlert(true)
+                        SetOpenModal(true)
                     } else {
                         SetUserEmail(data?.user?.email)
                         SetShowSetupSection(true)
                     }
                 } else {
                     SetError(data?.error)
-                    SetShowAlert(true)
+                    SetOpenModal(true)
                 }
             })
             .catch((error) => {
@@ -49,7 +52,7 @@ const VerifyPage = () => {
     }, [router.isReady]);
 
     const userNameSetupHandler = () => {
-        fetch('http://localhost:4000/api/check-username', {
+        fetch(`${config.url}/api/check-username`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,11 +62,11 @@ const VerifyPage = () => {
             .then(response => response.json())
             .then(data => {
                 if (data?.msg === "Username selected") {
-                    SetShowAlert(true)
+                    SetOpenModal(true)
                     SetError(data.msg)
                     SetUserName('')
                 } else {
-                    SetShowAlert(true)
+                    SetOpenModal(true)
                     SetError(data.error)
                 }
             })
@@ -75,13 +78,17 @@ const VerifyPage = () => {
     return (
         <div className={`container-fluid text-center`}>
 
+            <Modal
+                open={OpenModal}
+                modalClose={() => SetOpenModal(false)}
+                message={Error}
+            />
+
             <div className={`container-md`}>
                 <Nav showNavLinks={false} />
             </div>
 
             <div style={{ minHeight: '110px' }}>
-
-                {ShowAlert && <div>{Error}</div>}
 
                 {ShowSetupSection
                     && <div style={{ paddingBlock: 'min(15vh, 100px)' }}>
