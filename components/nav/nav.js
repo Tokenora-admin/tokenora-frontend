@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { config } from '../../config'
 
 import tokenoraLogo from '../../public/tokenora-logo.svg'
 import tokenoraText from '../../public/tokenora-text.svg'
