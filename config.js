@@ -1,3 +1,3 @@
 export const config = {
-    url: `https://tokenora.net`
+    url: `https://tokenora.herokuapp.com/`
 }
