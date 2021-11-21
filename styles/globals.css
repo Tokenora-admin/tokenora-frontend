@@ -1,0 +1,155 @@
+html, body {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #1E1B43 !important;
+  color: white !important;
+  font-family: Poppins !important;
+  scroll-behavior: smooth !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.heading {
+  font-style: normal;
+}
+
+.mainheading {
+  font-weight: bold;
+}
+
+.subheading {
+  font-weight: 500;
+  color: #7877B1;
+}
+
+.color-F7931A {
+  color: #F7931A;
+}
+
+.color-CECDE1 {
+  color: #CECDE1;
+}
+
+.color-7877B1 {
+  color: #7877B1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.rotate-180 {
+  transform: rotate(-180deg);
+  transition: transform 300ms;
+}
+
+.faqicon {
+  transition: transform 300ms;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.btn {
+  background: #7877B1 !important;
+  font-weight: bold !important;
+  box-shadow: 0px 8px 25px rgba(23, 18, 43, 0.4) !important;
+  border: 0px !important;
+}
+
+.btn:hover {
+  background: #9994e0 !important;
+}
+
+.btn:active {
+  color: #ffffff !important;
+  background: rgba(247, 147, 26, 1) !important;
+}
+
+.joinButton {
+  border-radius: 6px;
+  color: #46436e;
+  width: 100%;
+}
+
+#nav {
+  padding-block: min(10vh, 50px);
+}
+
+#headingone {
+  padding-block: min(10vh, 80px);
+}
+
+#webpreview {
+  padding-block: min(10vh, 30px);
+}
+
+#headingtwo {
+  padding-block: min(10vh, 60px);
+}
+
+#cards {
+  padding-block: min(10vh, 50px);
+}
+
+#headingthree {
+  padding-block: min(10vh, 40px);
+}
+
+#signup {
+  padding-block: min(10vh, 50px);
+}
+
+#mobilepreview {
+  padding-block: min(10vh, 70px);
+}
+
+#faq {
+  padding-block: min(10vh, 50px);
+}
+
+#headingfour {
+  padding-block: min(10vh, 50px);
+}
+
+#social {
+  padding-block: min(10vh, 20px);
+}
+
+.mobile-screen-preview {
+  margin: 10px;
+}
+
+.whitespace-preline {
+  white-space: pre-line;
+}
+
+.inputElement {
+  background: rgba(46, 42, 101, 0.5) !important;
+  box-shadow: 0px 8px 25px rgba(23, 18, 43, 0.4) !important;
+  border: 0px !important;
+  border-radius: 10px !important;
+  color: #C1C1EC !important;
+  font-weight: 400 !important;
+  line-height: 38px !important;
+  font-size: 20px !important;
+}
+
+.signupButton {
+  border-radius: 10px;
+  width: 100%;
+  color: #1e1b43;
+}
+
+.inputElement::placeholder {
+  color: #7877B1;
+}
+
+.inputElement:focus {
+  background-color: rgba(46, 42, 101, 0.5);
+  color: #C1C1EC;
+  font-weight: 500;
+}
