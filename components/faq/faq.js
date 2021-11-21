@@ -20,17 +20,12 @@ const Faq = () => {
             
             we created tokenora because we believe decentralisation is the ultimate future, and to get everyone on board with it, we have to make ourselves familiar with it first. \n
 
-            at tokenora, we play the zero sum game. everyone grows. and that's what makes us special.`
+            at tokenora, we play the positive-sum game. everyone grows. and that's what makes us special.`
         },
         {
             id: 3,
             q1: 'how can you join tokenora?',
             a1: "you can start by typing in your email and reserving a username."
-        },
-        {
-            id: 4,
-            q1: 'is this another social media app or something?',
-            a1: "Tokenora is a community-first crypto initiative that aims to bring together crypto enthusiasts from all walks of life. whether you are a professional crypto maniac or someone who is following their curiosity, we want to serve them all."
         }
     ])
     return (
