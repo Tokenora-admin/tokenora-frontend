@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,6 +10,13 @@ import twitterLogo from '../../public/social-icons/twitter.svg'
 import facebookLogo from '../../public/social-icons/facebook.svg'
 
 const Nav = (props) => {
+    
+    useEffect(() => {
+        fetch(`${config.url}`, {
+            method: 'GET'
+        })
+        .then(res => res.json())
+    }, [])
 
     const [SocialIcons] = useState([
         {
