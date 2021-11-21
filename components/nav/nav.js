@@ -16,7 +16,6 @@ const Nav = (props) => {
         fetch(`${config.url}`, {
             method: 'GET'
         })
-        .then(res => res.json())
     }, [])
 
     const [SocialIcons] = useState([
