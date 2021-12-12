@@ -69,7 +69,7 @@ const Nav = (props) => {
                             </a>
                         })}
                     </span>
-                    <a href="#join" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>
+                    {props?.showJoin && <a href="#join" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>}
                 </>
             }
 

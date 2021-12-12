@@ -6,7 +6,7 @@ const privacy = () => {
         <div className={`container-fluid`}>
 
             <div className={`container-md`}>
-                <Nav showNavLinks={true} />
+                <Nav showNavLinks={true} showJoin={false}/>
             </div>
             <div>
                 Privacy policies

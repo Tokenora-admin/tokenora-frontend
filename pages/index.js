@@ -16,7 +16,7 @@ export default function Home() {
     <div className={`container-fluid text-center`}>
 
       <div className={`container-md`}>
-        <Nav showNavLinks={true}/>
+        <Nav showNavLinks={true} showJoin={true}/>
         <HeadingOne />
         <WebPreview />
         <HeadingTwo />

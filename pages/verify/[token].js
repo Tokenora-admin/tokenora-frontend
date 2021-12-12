@@ -86,7 +86,7 @@ const VerifyPage = () => {
             />
 
             <div className={`container-md`}>
-                <Nav showNavLinks={false} />
+                <Nav showNavLinks={false} showJoin={false}/>
             </div>
 
             <div style={{ minHeight: '110px' }}>
