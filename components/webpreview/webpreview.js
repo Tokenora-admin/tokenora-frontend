@@ -1,17 +1,17 @@
 import React from 'react'
-import Image from 'next/image'
+import NextImageZoomWrapper from '../NextImageZoomWrapper/NextImageZoomWrapper'
 
 import TokenoraWebpage from '../../public/web-preview/tokenora-webpage.png'
 
 const Webpreview = () => {
     return (
         <div id="webpreview">
-            <Image
+            <NextImageZoomWrapper
                 src={TokenoraWebpage}
-                alt="tokenora-webpage"
-                placeholder="blur"
+                alt="Tokenora Webpage preview"
+                priority={false}
             />
-        </div>
+        </div >
     )
 }
 

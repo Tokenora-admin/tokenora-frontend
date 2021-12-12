@@ -7,11 +7,12 @@ const SignUp = () => {
     const [Email, setEmail] = useState('')
     const [Message, SetMessage] = useState('')
     const [OpenModal, SetOpenModal] = useState(false)
+    const [IsDisabled, SetIsDisabled] = useState(false)
     const [emailRegExp] = useState(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
 
     const signupHandler = () => {
         if (emailRegExp.test(Email)) {
-
+            SetIsDisabled(true)
             fetch(`${config.url}/api/submit`, {
                 method: 'POST',
                 headers: {
@@ -21,14 +22,21 @@ const SignUp = () => {
             })
                 .then(response => response.json())
                 .then(data => {
-                    data?.user &&
-                        SetOpenModal(true)
-                    SetMessage('Thank you, please check your inbox')
+                    SetIsDisabled(false)
 
-                    data?.error &&
-                        (typeof (data?.error) === 'string'
-                            ? SetMessage(data?.error)
-                            : SetMessage(data?.error?.error[0]?.msg))
+                    if (data?.user) {
+                        SetOpenModal(true)
+                        setEmail('')
+                        SetMessage(`Thanks for signing up. Please check your email. \n Don't forget to check your spam folder if it doesn't arrive in your inbox.`)
+                    }
+
+                    if (data?.error) {
+                        if (typeof (data?.error) === 'string') {
+                            SetMessage(data?.error)
+                        } else {
+                            SetMessage(data?.error[0]?.msg)
+                        }
+                    }
                     SetOpenModal(true)
                 })
                 .catch((error) => {
@@ -57,12 +65,13 @@ const SignUp = () => {
                         value={Email}
                         spellCheck={false}
                         required
+                        disabled={IsDisabled}
                     />
                 </div>
                 <div className="col-lg-2 col-md-3 col-sm-4 col-4 p-1">
                     <button type="button"
                         className={`btn signupButton`}
-                        disabled={Email.length === 0}
+                        disabled={IsDisabled}
                         onClick={() => signupHandler()}
                     >Signup</button>
                 </div>

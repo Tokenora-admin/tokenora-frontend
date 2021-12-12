@@ -15,7 +15,7 @@ const Cards = () => {
         },
         {
             main: "news & updates",
-            sub: "get reliable information about what's happening in the crypto world with accurate information and latest updates",
+            sub: "get reliable information about what's happening in the crypto world with accurate and latest updates",
             src: NewsUpdatesLogo
         },
         {

@@ -20,14 +20,14 @@
   backdrop-filter: blur(20px);
   border-radius: 10px;
   margin: auto;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid #888;
   width: 80%;
   color: #fff;
 }
 
 .modalcontentData {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .close {
@@ -35,6 +35,7 @@
   float: right;
   font-size: 28px;
   font-weight: bold;
+  line-height: 20px;
 }
 
 .close:hover, .close:focus {

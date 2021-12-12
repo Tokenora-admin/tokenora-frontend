@@ -12,19 +12,23 @@ const Social = () => {
     const [SocialIcons] = useState([
         {
             name: 'Medium',
-            src: mediumLogo
+            src: mediumLogo,
+            link: ''
         },
         {
             name: 'Instagram',
-            src: instagramLogo
+            src: instagramLogo,
+            link: 'https://www.instagram.com/tokenoraindia/'
         },
         {
             name: 'Twitter',
-            src: twitterLogo
+            src: twitterLogo,
+            link: ''
         },
         {
             name: 'Facebook',
-            src: facebookLogo
+            src: facebookLogo,
+            link: ''
         },
     ])
 
@@ -32,7 +36,7 @@ const Social = () => {
         <div id="social" className={`row justify-content-center user-select-none`}>
             {SocialIcons.map(i => {
                 return (
-                    <div key={i.name} className={`d-flex justify-content-center col-lg-2 col-md-3 col-sm-4 col-7 p-2 m-1 cursor-pointer ${styles.socialDiv}`}>
+                    <a key={i.name} href={i?.link ? i?.link : '/'} target="_blank" rel="noreferrer" className={`d-flex justify-content-center col-lg-2 col-md-3 col-sm-4 col-7 p-2 m-1 cursor-pointer ${styles.socialDiv}`}>
                         <Image
                             src={i.src}
                             alt={i.name}
@@ -40,7 +44,7 @@ const Social = () => {
                             height={25}
                         />
                         <span className={`color-7877B1`}>&nbsp;{i.name}</span>
-                    </div>
+                    </a>
                 )
             })}
 

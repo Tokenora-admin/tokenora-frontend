@@ -11,7 +11,7 @@ import twitterLogo from '../../public/social-icons/twitter.svg'
 import facebookLogo from '../../public/social-icons/facebook.svg'
 
 const Nav = (props) => {
-    
+
     useEffect(() => {
         fetch(`${config.url}`, {
             method: 'GET'
@@ -21,19 +21,23 @@ const Nav = (props) => {
     const [SocialIcons] = useState([
         {
             name: 'Medium',
-            src: mediumLogo
+            src: mediumLogo,
+            link: ''
         },
         {
             name: 'Instagram',
-            src: instagramLogo
+            src: instagramLogo,
+            link: 'https://www.instagram.com/tokenoraindia/'
         },
         {
             name: 'Twitter',
-            src: twitterLogo
+            src: twitterLogo,
+            link: ''
         },
         {
             name: 'Facebook',
-            src: facebookLogo
+            src: facebookLogo,
+            link: ''
         },
     ])
 
@@ -55,7 +59,7 @@ const Nav = (props) => {
                 <>
                     <span className="ms-auto d-none d-md-block">
                         {SocialIcons.map(i => {
-                            return <Link href='/' key={i.name}><a className="mx-1 cursor-pointer">
+                            return <a key={i.name} href={i?.link ? i?.link : '/'} target="_blank" rel="noreferrer" className="mx-1 cursor-pointer">
                                 <Image
                                     src={i.src}
                                     alt={i.name}
@@ -63,11 +67,11 @@ const Nav = (props) => {
                                     width={40}
                                 />
                             </a>
-                            </Link>
                         })}
                     </span>
-                    <a href="#signup" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>
-                </>}
+                    <a href="#join" role="button" className={`btn btn-sm joinButton col-3 d-md-none ms-auto`}>Join</a>
+                </>
+            }
 
         </header>
     )

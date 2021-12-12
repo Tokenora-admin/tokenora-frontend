@@ -2,6 +2,7 @@
     background: linear-gradient(268.95deg, rgba(41, 37, 88, 0.536345) 4.06%, rgba(38, 35, 83, 0.866791) 89.59%);
     box-shadow: 0px 8px 25px rgba(23, 18, 43, 0.4);
     border-radius: 10px;
+    text-decoration: none;
 }
 
 .socialDiv:hover {

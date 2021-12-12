@@ -6,7 +6,7 @@ const Modal = (props) => {
         <div className={`${styles.modal}`} style={{display: props.open ? 'block' : 'none'}}>
             <div className={styles.modalcontent}>
                 <span onClick={() => props.modalClose()} className={styles.close}>&times;</span>
-                <p className={styles.modalcontentData}>{props.message}</p>
+                <p className={`${styles.modalcontentData} whitespace-preline`}>{props.message}</p>
             </div>
 
         </div>
